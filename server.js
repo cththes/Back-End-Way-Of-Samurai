@@ -44,3 +44,14 @@ const server = http.createServer(async (requrest, response) => {
 })
 
 server.listen(3003)
+
+fetch('http://localhost:5000/api/images/1', {method: 'GET'})
+fetch('http://localhost:5000/api/images/1', {method: 'DELETET'})
+fetch('http://localhost:5000/api/images/1', {method: 'POST'})
+fetch('http://localhost:5000/api/images/1', {method: 'PUT'})
+fetch('http://localhost:5000/api/images/1', {method: 'PATCH'})
+
+fetch('http://localhost:5000/api/images/?author=fowler&year=2022limit=100&sort=title', {method: 'PATCH'})
+fetch('http://localhost:5000/api/images/1', {method: 'POST', body: JSON.stringify({title: 'JS - Samurai Way', author: 'Dimych'}),headers:{"Content-type":"application/json"}})
+fetch('http://localhost:5000/api/images/1', {method: 'PUT', body: JSON.stringify({title: 'JS - Samurai Way', author: 'Dimych', year: 2022})})
+fetch('http://localhost:5000/api/images/1', {method: 'PATCH', body: {year: 2022}})
